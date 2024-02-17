@@ -108,8 +108,8 @@
                 </div>
                 <!-- Greenline Paribahan part  -->
                 <div>
-                    <div class="flex flex-col-reverse md:flex-row justify-between bg-white p-5 rounded-2xl w-full -z-20">
-                        <div class="text-[#030712CC] flex-1">
+                    <div class="flex flex-col-reverse md:flex-row justify-between bg-white  rounded-2xl w-full -z-20">
+                        <div class="text-[#030712CC] flex-1 p-5">
                             <!-- Greenline Paribahan header  -->
                             <div class="flex justify-between mt-8 md:mt-1">
                                 <div class="flex flex-col lg:flex-row lg:items-center">
@@ -144,13 +144,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- devider is here  -->
-                        <div class="border-dashed border-[#1DD100] border lg:ml-16 mx-4 lg:mx-7 relative my-26">
-                            <div class="w-10 lg:w-16 bg-[#F7F8F8] aspect-square absolute rounded-full -left-5 lg:-left-8 -top-10 lg:-top-12 hidden md:block"></div>
-                            <div class="w-10 lg:w-16 bg-[#F7F8F8] aspect-square absolute rounded-full -left-5 lg:-left-8 -bottom-10 lg:-bottom-12 hidden md:block " style="clip-path: inset(0 0 30% 0);"></div>
+                        <div class="">
+                            <img class="hidden h-full lg:block" src="./images/info-devider.png" alt="">
                         </div>
                         <!-- money left side  -->
-                        <div class="p-7 text-center flex flex-col items-center justify-center">
+                        <div class="m-7 pr-8 text-center flex flex-col items-center justify-center">
                             <img src="./images/fare.png" alt="">
                             <h3 class="text-2xl font-bold text-black mt-4">550 Taka</h3>
                             <p class="text-[#03071280] font-semibold">Per Seat</p>
@@ -158,9 +156,10 @@
                     </div>
                 </div>
                 <!-- Select Your Seat and calclution part is here  -->
-                <div class="grid grid-cols-5 rounded-2xl bg-white mt-5 p-6">
+                <div class="grid grid-cols-1 gap-5 md:gap-0 md:grid-cols-5 rounded-2xl bg-white mt-5 p-6">
                     <!-- Select Your Seat -->
-                    <div class="col-span-3">
+                    <div class="col-span-1 md:col-span-3 lg:border-r border-dashed md:pr-6 border-[#0307124D]">
+                       <div>
                         <h3 class="font-semibold text-xl text-[#030712]">Select Your Seat</h3>
                         <div class="border-dashed border-[#03071233] mt-5 mb-3 border"></div>
                         <div class="font-inter flex justify-between">
@@ -174,9 +173,81 @@
                             </div>
                         </div>
                         <div class="border-dashed border-[#03071233] mt-3 mb-5 border"></div>
+                       </div>
+                        <!-- all seat are here  -->
+                       <div class="grid grid-cols-10 gap-6 font-medium text-base font-inter">
+                            <div class="col-span-1 flex flex-col gap-6 text-center *:py-3">
+                                <p class="text-white bg-white select-none">0</p>
+                                <p>A</p>
+                                <p>B</p>
+                                <p>C</p>
+                                <p>D</p>
+                                <p>E</p>
+                                <p>F</p>
+                                <p>G</p>
+                                <p>H</p>
+                                <p>I</p>
+                                <p>J</p>
+                            </div>
+                            <div class="col-span-2 flex flex-col gap-6 pointer-events-none *:w-full *:py-3 *:rounded-xl">
+                                <button class="text-white bg-white select-none">0</button>
+                                <button class="seat bg-[#F7F8F8]">A1</button>
+                                <button class="seat bg-[#F7F8F8]">B1</button>
+                                <button class="seat bg-[#F7F8F8]">C1</button>
+                                <button class="seat bg-[#F7F8F8]">D1</button>
+                                <button class="seat bg-[#F7F8F8]">E1</button>
+                                <button class="seat bg-[#F7F8F8]">F1</button>
+                                <button class="seat bg-[#F7F8F8]">G1</button>
+                                <button class="seat bg-[#F7F8F8]">H1</button>
+                                <button class="seat bg-[#F7F8F8]">I1</button>
+                                <button class="seat bg-[#F7F8F8]">J1</button>
+                            </div>
+                            <div class="col-span-2 flex flex-col gap-6 *:w-full *:py-3 *:rounded-xl">
+                                <button class="text-white bg-white pointer-events-none select-none">0</button>
+                                <button class="seat bg-[#F7F8F8]">A2</button>
+                                <button class="seat bg-[#F7F8F8]">B2</button>
+                                <button class="seat bg-[#F7F8F8]">C2</button>
+                                <button class="seat bg-[#F7F8F8]">D2</button>
+                                <button class="seat bg-[#F7F8F8]">E2</button>
+                                <button class="seat bg-[#F7F8F8]">F2</button>
+                                <button class="seat bg-[#F7F8F8]">G2</button>
+                                <button class="seat bg-[#F7F8F8]">H2</button>
+                                <button class="seat bg-[#F7F8F8]">I2</button>
+                                <button class="seat bg-[#F7F8F8]">J2</button>
+                            </div>
+                            <div class="col-span-1">
+                                <!-- Empty line -->
+                            </div>
+                            <div class="col-span-2 flex flex-col gap-6 *:w-full *:py-3 *:rounded-xl">
+                                <button class="text-white bg-white select-none pointer-events-none">0</button>
+                                <button class="seat bg-[#F7F8F8]">A3</button>
+                                <button class="seat bg-[#F7F8F8]">B3</button>
+                                <button class="seat bg-[#F7F8F8]">C3</button>
+                                <button class="seat bg-[#F7F8F8]">D3</button>
+                                <button class="seat bg-[#F7F8F8]">E3</button>
+                                <button class="seat bg-[#F7F8F8]">F3</button>
+                                <button class="seat bg-[#F7F8F8]">G3</button>
+                                <button class="seat bg-[#F7F8F8]">H3</button>
+                                <button class="seat bg-[#F7F8F8]">I3</button>
+                                <button class="seat bg-[#F7F8F8]">J3</button>
+                            </div>
+                            <div class="col-span-2 flex flex-col gap-6 *:bg-[#F7F8F8] *:w-full *:py-3 *:rounded-xl">
+                                <button class="flex items-center  justify-center pointer-events-none"><img src="./images/gear.svg" alt=""></button>
+                                <button class="seat">A4</button>
+                                <button class="seat">B4</button>
+                                <button class="seat">C4</button>
+                                <button class="seat">D4</button>
+                                <button class="seat">E4</button>
+                                <button class="seat">F4</button>
+                                <button class="seat">G4</button>
+                                <button class="seat">H4</button>
+                                <button class="seat">I4</button>
+                                <button class="seat">J4</button>
+                            </div>
+                       </div>
                     </div> 
                     <!--  Seat calclution part  -->
-                    <div class="col-span-2">
+                    <div class="col-span-1 md:col-span-2 pl-5">
                         <div class="text-[#030712CC]">
                             <h3 class="font-semibold text-xl text-[#030712]">Select Your Seat</h3>
                             <div class="border-dashed border-[#03071233] my-5 border"></div>
@@ -219,7 +290,7 @@
                                 </div>
                                 <div>
                                     <h3 class="mt-5 mb-3 font-semibold text-black">Phone Number*</h3>
-                                    <input class="w-full text-sm border-[#0307121A] border font-normal p-5 rounded-xl" type="number" name=""
+                                    <input id="number-filed" class="w-full text-sm border-[#0307121A] border font-normal p-5 rounded-xl" type="number" name=""
                                         placeholder="Enter your phone number">
                                 </div>
                                 <div>
@@ -227,7 +298,7 @@
                                     <input class="w-full text-sm border-[#0307121A] border font-normal p-5 rounded-xl" type="email" name=""
                                         placeholder="Enter your email id">
                                 </div>
-                                <button class="btn bg-[#1DD100] text-white w-full font-extrabold text-xl my-5">Next</button>
+                                <button id="next-btn" class="btn bg-[#1DD100] text-white w-full font-extrabold text-xl my-5 rounded-xl">Next</button>
                                 <div class="*:underline *:text-sm *:font-normal *:text-[#03071299] flex justify-around">
                                     <p >Terms and Conditions</p>
                                     <p >Cancellation Policy</p>
