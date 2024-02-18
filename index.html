@@ -97,7 +97,7 @@
                             <div class="w-9 bg-white aspect-square absolute rounded-full -left-[1.1rem] -bottom-10"></div>
                         </div>
                         <div class="md:p-5 text-center flex flex-col items-center justify-center font-ra">
-                            <h3 class="text-xl md:text-2xl font-bold text-black">Couple 20</h3>
+                            <h3 class="text-xl lg:text-2xl font-bold text-black">Couple 20</h3>
                             <p class="text-[#03071280] font-medium">Coupon Code</p>
                         </div>
                     </div>
@@ -275,9 +275,12 @@
                                     <p>Total Price</p>
                                     <p>BDT <span id="total-price">0</span></p>
                                 </div>
-                                <div class="relative mt-3">
-                                    <input class="w-full text-xs font-normal p-5 rounded-xl" type="text" name="" placeholder="Have any copupon?" id="coupon-filed">
-                                    <button disabled id="apply-btn" class=" absolute right-0 py-[8px] px-3 bg-[#1DD100] rounded-lg text-white mt-2 mr-2">Apply</button>
+                                <ul id="discount-price" class=" text-sm text-[#030712]">
+
+                                </ul>
+                                <div id="coupon-from" class="relative mt-3">
+                                    <input class="w-full text-xs font-normal p-4 rounded-xl" type="text" name="" placeholder="Have any copupon?" id="coupon-filed">
+                                    <button disabled id="apply-btn" class="btn btn-sm absolute right-0 bg-[#1DD100] rounded-lg text-white mt-2 mr-2">Apply</button>
                                 </div>
                                 <!-- grand-price  -->
                                 <div class="flex justify-between text-sm text-[#030712] mt-5">
@@ -317,7 +320,7 @@
                                         <div class="mt-4">
                                             <form method="dialog">
                                                 <!-- if there is a button in form, it will close the modal -->
-                                                <button class="btn bg-[#27AE60] text-white px-16 rounded-full">Continue</button>
+                                                <button onclick="clearFiled()" class="btn bg-[#27AE60] text-white px-16 rounded-full">Continue</button>
                                             </form>
                                         </div>
                                     </div>

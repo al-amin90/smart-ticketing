@@ -4,10 +4,15 @@ let seatLeft = parseInt(document.querySelector("#seats-left").innerText);
 const seats = document.querySelectorAll(".seat");
 for (const seat of seats) {
     seat.addEventListener("click", function () {
+        buySeatCount++;
+        if (buySeatCount > 4) {
+            alert("You Can't Buy More Than 4 Ticket!!!");
+            return;
+        }
+
         seat.classList.add("bg-change");
         seat.classList.remove("bg-[#F7F8F8]");
         seat.setAttribute("disabled", true);    
-        buySeatCount++;
         document.getElementById("buy-seat-count").innerText = buySeatCount;
         seatLeft--
         document.querySelector("#seats-left").innerText = seatLeft;
@@ -26,5 +31,33 @@ for (const seat of seats) {
         document.getElementById("total-price").innerText = totalPrice;
         document.getElementById("grand-price").innerText = totalPrice;
 
+        if (buySeatCount === 4) {
+            document.querySelector("#apply-btn").removeAttribute("disabled");
+        }
+
+        const numberFiled = document.querySelector("#number-filed").value;
+        if (numberFiled !== "" && buySeatCount !== 0) {
+            document.querySelector("#next-btn").removeAttribute("disabled");
+        }
     })
 }
+
+ document.querySelector("#number-filed").addEventListener("keyup", function (e) {
+    if (e.target.value !== "" && buySeatCount !== 0) {
+        document.querySelector("#next-btn").removeAttribute("disabled");
+    }
+ })
+
+document.querySelector("#apply-btn").addEventListener("click", function () {
+    const cuponValue = document.getElementById("coupon-filed").value;
+    if (cuponValue === "NEW15") {
+        discountCalclution(0.15);
+    }
+    else if (cuponValue === "Couple 20") {
+        discountCalclution(0.2);
+    }
+    else {
+        alert("Invalid Cupon Code!");
+        document.getElementById("coupon-filed").value = "";
+    }
+ })
