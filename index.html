@@ -27,6 +27,18 @@
             background-color: #1DD100;
             color: white;
         }
+        .red-input-alert{
+            color: red;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
     </style>
 </head> 
 <body class="max-w-[1440px] mx-auto font-raleway">
@@ -328,9 +340,9 @@
                                     <input class="w-full text-sm border-[#0307121A] border font-normal p-5 rounded-xl" type="text" name=""
                                         placeholder="Enter your name">
                                 </div>
-                                <div>
+                                <div id="number-filed-container">
                                     <h3 class="mt-5 mb-3 font-semibold text-black">Phone Number*</h3>
-                                    <input id="number-filed" class="w-full text-sm border-[#0307121A] border font-normal p-5 rounded-xl" type="number" name=""
+                                    <input id="number-filed" inputmode=”numeric” class="w-full text-sm border-[#0307121A] border font-normal p-5 rounded-xl" type="number" name=""
                                         placeholder="Enter your phone number">
                                 </div>
                                 <div>

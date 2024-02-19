@@ -36,15 +36,29 @@ for (const seat of seats) {
         }
 
         const numberFiled = document.querySelector("#number-filed").value;
-        if (numberFiled !== "" && buySeatCount !== 0) {
+        if (numberFiled.length === 11 && buySeatCount !== 0) {
+            console.log(numberFiled.length)
             document.querySelector("#next-btn").removeAttribute("disabled");
         }
     })
 }
 
- document.querySelector("#number-filed").addEventListener("keyup", function (e) {
-    if (e.target.value !== "" && buySeatCount !== 0) {
+document.querySelector("#number-filed").addEventListener("keyup", function (e) {
+    const inputDiv = e.target.parentNode;
+    const pSms = document.querySelector("#number-filed-container p");
+    if (e.target.value.length !== 11 && !!pSms === false) {
+        const p = document.createElement("p");
+        p.innerText = "Please Select At least One Seat And Provide A Correct 11 Digit Phone Number";
+        p.classList.add("red-input-alert")
+        inputDiv.appendChild(p);
+    }
+
+    if (e.target.value.length === 11 && buySeatCount !== 0) {
         document.querySelector("#next-btn").removeAttribute("disabled");
+        pSms.remove();
+    }
+    else {
+        document.querySelector("#next-btn").setAttribute("disabled", true);
     }
  })
 
